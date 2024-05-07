@@ -13,9 +13,22 @@
             <?php echo e($post->title); ?>
 
         </h1>
+
+        <p>
+            By 
+
+            <a href="/author/<?php echo e($post->author->username); ?>">
+                <?php echo e($post->author->name); ?>
+
+            </a>
+
+            in
+
+            <a href="/categories/<?php echo e($post->category->slug); ?>">
+             <?php echo e($post->category->name); ?> 
+            </a>
+        </p>
         <div> 
-            <!-- <?= $post->body; ?> -->
-            <!-- same -->
             <?php echo $post->body; ?>
 
         </div>
@@ -30,4 +43,7 @@
 <?php if (isset($__componentOriginal23a33f287873b564aaf305a1526eada4)): ?>
 <?php $component = $__componentOriginal23a33f287873b564aaf305a1526eada4; ?>
 <?php unset($__componentOriginal23a33f287873b564aaf305a1526eada4); ?>
-<?php endif; ?><?php /**PATH C:\wamp64\www\blog\resources\views/post.blade.php ENDPATH**/ ?>
+<?php endif; ?>
+
+
+<?php /**PATH C:\wamp64\www\blog\resources\views/post.blade.php ENDPATH**/ ?>
