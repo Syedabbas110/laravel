@@ -2,7 +2,6 @@
 
 namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,8 +11,21 @@ class Post extends Model
 
     protected $with = ['author', 'category'];
 
+    public function scopeFilter($query, array $filters) {
+        $query->when($filters['search'] ?? false,
+         fn($query, $search) => 
+            $query
+                ->where('title', 'like', '%' . request('search') . '%')
+                ->orWhere('body', 'like', '%' . request('search') . '%'));
 
-    protected $fillable = ['slug', 'title', 'category_id' , 'excerpt', 'body', 'user_id'];
+         $query->when($filters['category'] ?? false,
+         fn($query, $category) => 
+            $query
+                ->whereHas('category', fn($query) =>
+                    $query
+                        ->where('slug', $category))
+                );
+    }
 
     public function category() {
         //hasOne, hasMany, belongsTo, belongsToMany
