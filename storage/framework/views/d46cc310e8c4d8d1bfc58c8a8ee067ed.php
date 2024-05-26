@@ -32,10 +32,94 @@
 
             <div class="mt-8 md:mt-0 flex items-center">
                 <?php if(auth()->guard()->check()): ?>
-                    <span class="text-xs font-bold uppercase"> Welcome, <?php echo e(auth()->user()->name); ?> !</span>
+                    <?php if (isset($component)) { $__componentOriginaldf8083d4a852c446488d8d384bbc7cbe = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginaldf8083d4a852c446488d8d384bbc7cbe = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.dropdown','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('dropdown'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+                         <?php $__env->slot('trigger', null, []); ?> 
+                            <button class="text-xs font-bold uppercase"> Welcome, <?php echo e(auth()->user()->name); ?> !</button>
+                         <?php $__env->endSlot(); ?>
 
-                    <form method="POST" action="/logout"
-                    class="text-xs font-semibold text-blue-500 ml-6">
+                        <?php if (\Illuminate\Support\Facades\Blade::check('admin')): ?>
+                            <?php if (isset($component)) { $__componentOriginal6b1d0d55421798f4a1c7b596bea6c022 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.dropdown-item','data' => ['href' => '/admin/posts/create','active' => request()->is('admin/posts/create')]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('dropdown-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['href' => '/admin/posts/create','active' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(request()->is('admin/posts/create'))]); ?>New Post <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022)): ?>
+<?php $attributes = $__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022; ?>
+<?php unset($__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal6b1d0d55421798f4a1c7b596bea6c022)): ?>
+<?php $component = $__componentOriginal6b1d0d55421798f4a1c7b596bea6c022; ?>
+<?php unset($__componentOriginal6b1d0d55421798f4a1c7b596bea6c022); ?>
+<?php endif; ?>
+
+                            <?php if (isset($component)) { $__componentOriginal6b1d0d55421798f4a1c7b596bea6c022 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.dropdown-item','data' => ['href' => '/admin/posts','active' => request()->is('admin/posts')]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('dropdown-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['href' => '/admin/posts','active' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(request()->is('admin/posts'))]); ?>Dashboard <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022)): ?>
+<?php $attributes = $__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022; ?>
+<?php unset($__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal6b1d0d55421798f4a1c7b596bea6c022)): ?>
+<?php $component = $__componentOriginal6b1d0d55421798f4a1c7b596bea6c022; ?>
+<?php unset($__componentOriginal6b1d0d55421798f4a1c7b596bea6c022); ?>
+<?php endif; ?>
+                        <?php endif; ?>
+
+                        <?php if (isset($component)) { $__componentOriginal6b1d0d55421798f4a1c7b596bea6c022 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.dropdown-item','data' => ['href' => '#','xData' => '{}','@click.prevent' => 'document.querySelector(\'#logout-form\').submit()']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('dropdown-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['href' => '#','x-data' => '{}','@click.prevent' => 'document.querySelector(\'#logout-form\').submit()']); ?>Log Out <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022)): ?>
+<?php $attributes = $__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022; ?>
+<?php unset($__attributesOriginal6b1d0d55421798f4a1c7b596bea6c022); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal6b1d0d55421798f4a1c7b596bea6c022)): ?>
+<?php $component = $__componentOriginal6b1d0d55421798f4a1c7b596bea6c022; ?>
+<?php unset($__componentOriginal6b1d0d55421798f4a1c7b596bea6c022); ?>
+<?php endif; ?>
+                     <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginaldf8083d4a852c446488d8d384bbc7cbe)): ?>
+<?php $attributes = $__attributesOriginaldf8083d4a852c446488d8d384bbc7cbe; ?>
+<?php unset($__attributesOriginaldf8083d4a852c446488d8d384bbc7cbe); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginaldf8083d4a852c446488d8d384bbc7cbe)): ?>
+<?php $component = $__componentOriginaldf8083d4a852c446488d8d384bbc7cbe; ?>
+<?php unset($__componentOriginaldf8083d4a852c446488d8d384bbc7cbe); ?>
+<?php endif; ?>
+
+                    <form id="logout-form" method="POST" action="/logout"
+                    class="hidden">
                         <?php echo csrf_field(); ?>
                         <button type="submit"> Log Out</button>
                     </form>

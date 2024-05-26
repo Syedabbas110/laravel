@@ -11,17 +11,20 @@
 
     </x-slot>
  
-    <x-dropdown-item href="/?{{ http_build_query(request()->except('category', 'page')) }}" :active="request()->routeIs('home')">
+    <x-dropdown-item href="/?{{ http_build_query(request()->except('category', 'page')) }}" :active="request()->is('/')">
         All
     </x-dropdown-item>
 
     @foreach($categories as $category)
+        @php 
+            $link = "/?category=" . $category->slug . "&" . http_build_query(request()->except('category', 'page'));
+        @endphp
 
         <x-dropdown-item
-        href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category', 'page')) }}" 
-        :active='request()->is("/category={$category->slug}")'
-        >
-            {{ucwords($category->name)}} 
+        href="{{ $link }}" 
+        :active="request()->is($link)"
+        > 
+        {{ ucwords($category->name) }}
         </x-dropdown-item>
 
     @endforeach
