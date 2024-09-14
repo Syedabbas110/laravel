@@ -1,5 +1,6 @@
 @props(['name'])
 
+
 <x-form.field>
 	<x-form.label name="{{ $name }}" />
 

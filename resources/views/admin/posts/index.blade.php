@@ -6,6 +6,7 @@
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200">
                             <tbody class="bg-white divide-y divide-gray-200">
+                                
                                 @foreach ($posts as $post)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -32,6 +33,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
+
                             </tbody>
                         </table>
                     </div>

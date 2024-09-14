@@ -8,7 +8,6 @@
 			<x-form.textarea name="excerpt" />
 			<x-form.textarea name="body" />
 
-
 			<x-form.field>
 				<x-form.label name="category" />
 					<select name="category_id" id="category_id">

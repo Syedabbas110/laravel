@@ -34,6 +34,7 @@
 			</x-form.field>	
 
 			<x-form.button> Update </x-form.button>
+			
 		</form>
 	</x-setting>
 </x-layout>	

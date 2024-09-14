@@ -204,4 +204,5 @@ unset($__errorArgs, $__bag); ?>
 <?php endif; ?>
     </section>
 </body>
+
 <?php /**PATH C:\wamp64\www\blog\resources\views/components/layout.blade.php ENDPATH**/ ?>

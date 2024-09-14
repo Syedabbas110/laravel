@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-interface Newsletter
-{
+interface Newsletter {
 	public function subscribe(string $email, string $list = null);
 }

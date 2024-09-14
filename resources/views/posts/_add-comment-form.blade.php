@@ -21,6 +21,7 @@
                 @error('body')
                     <span class="text-xs text-red-500"> {{ $message }}</span>
                 @enderror
+                
             </div> 
             <div class="flex justify-end mt-6 pt-6 border-t border-gray-200 ">
                 <x-form.button> Post </x-form.button>

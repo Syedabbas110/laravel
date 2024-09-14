@@ -22,7 +22,6 @@ class AdminPostController extends Controller
     }
 
     public function store() {
-        // dd(request()->all());
         Post::create(array_merge($this->validatePost(), [
             'user_id' => auth()->id(),
             'thumbnail' => request()->file('thumbnail')->store('thumbnails')

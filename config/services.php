@@ -37,5 +37,4 @@ return [
             'subscribers' =>env('MAILCHIMP_LIST_SUBSCRIBERS')
         ]
     ]
-
 ];

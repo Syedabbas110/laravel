@@ -28,4 +28,5 @@
         </x-dropdown-item>
 
     @endforeach
+    
 </x-dropdown>

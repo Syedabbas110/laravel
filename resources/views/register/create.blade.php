@@ -10,6 +10,7 @@
 	    			<x-form.input name="email" />
 	    			<x-form.input name="password" type="password"/>
 	    			<x-form.button> Submit </x-form.button>
+					
 	    			@if($errors->any())
 		    			<ul>
 			    			@foreach($errors->all() as $error)

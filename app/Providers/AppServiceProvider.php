@@ -21,7 +21,6 @@ use App\Services\MailchimpNewsletter;
 //  */
 // public function boot()
 // {
-    
 // }
 
 class AppServiceProvider extends ServiceProvider
